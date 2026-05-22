@@ -6,8 +6,8 @@ export function Footer() {
       <div className="checker h-3 opacity-20" />
       <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-12 grid gap-10 md:grid-cols-4">
         <div className="space-y-3">
-          <img src={logo} alt="LDD" className="h-16 w-16 brutal-border border-cream" />
-          <div className="font-display text-2xl">LOUD DESIGN DEPOT</div>
+          <img src={logo} alt="Lumi & Dee-Dee" className="h-16 w-16 brutal-border border-cream" />
+          <div className="font-display text-2xl">LUMI & DEE-DEE</div>
           <p className="font-mono-d text-xs uppercase tracking-widest text-cream/70">
             We print loud merch for brands that refuse to whisper.
           </p>
@@ -44,7 +44,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-cream/20 py-4 text-center font-mono-d text-[10px] uppercase tracking-[0.3em] text-cream/60">
-        © {new Date().getFullYear()} LDD · Loud Design Depot · All caps, all the time.
+        © {new Date().getFullYear()} Lumi & Dee-Dee · All caps, all the time.
       </div>
     </footer>
   );

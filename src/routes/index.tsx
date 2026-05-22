@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "LDD · Loud Design Depot — Anti-minimalist branded merch" },
+      { title: "Lumi & Dee-Dee — Anti-minimalist branded merch" },
       { name: "description", content: "Shop loud, maximalist branded merchandise across 20+ categories. Tees, hoodies, drinkware, eco-gifts, packaging and more." },
     ],
   }),
@@ -59,7 +59,7 @@ function Index() {
           </div>
           <div className="lg:col-span-5 relative">
             <div className="aspect-square brutal-border bg-ink p-8 flex items-center justify-center brutal-shadow-hot wiggle">
-              <img src={logo} alt="LDD" className="w-full h-full object-contain" />
+              <img src={logo} alt="Lumi & Dee-Dee" className="w-full h-full object-contain" />
             </div>
             <div className="absolute -top-4 -left-4 bg-acid brutal-border px-3 py-2 font-display text-lg uppercase -rotate-6">
               Since '24

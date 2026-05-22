@@ -47,7 +47,7 @@
 :root {
   --radius: 0.25rem;
 
-  /* LDD brand navy from logo */
+  /* Lumi & Dee-Dee brand navy */
   --ink: oklch(0.22 0.08 264);
   --cream: oklch(0.96 0.03 90);
   --electric: oklch(0.72 0.22 250);

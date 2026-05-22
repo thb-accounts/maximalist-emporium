@@ -12,8 +12,8 @@ export const Route = createFileRoute("/product/$handle")({
   component: ProductPage,
   head: ({ params }) => ({
     meta: [
-      { title: `${params.handle.replace(/-/g, " ")} · LDD` },
-      { name: "description", content: `Shop ${params.handle.replace(/-/g, " ")} at Loud Design Depot.` },
+      { title: `${params.handle.replace(/-/g, " ")} · Lumi & Dee-Dee` },
+      { name: "description", content: `Shop ${params.handle.replace(/-/g, " ")} at Lumi & Dee-Dee.` },
     ],
   }),
 });

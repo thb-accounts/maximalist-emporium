@@ -7,8 +7,8 @@ export const Route = createFileRoute("/categories")({
   component: CategoriesPage,
   head: () => ({
     meta: [
-      { title: "All Categories · LDD" },
-      { name: "description", content: "Browse all 20 LDD merch categories: apparel, drinkware, office, eco, packaging, tech and more." },
+      { title: "All Categories · Lumi & Dee-Dee" },
+      { name: "description", content: "Browse all 20 Lumi & Dee-Dee merch categories: apparel, drinkware, office, eco, packaging, tech and more." },
     ],
   }),
 });
