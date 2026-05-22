@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About · Lumi & Dee-Dee" },
-      { name: "description", content: "Lumi & Dee-Dee is an anti-minimalist merch shop printing for brands that refuse to whisper." },
+      { name: "description", content: "Lumi & Dee-Dee is an anti-minimalist merch shop printing for people that refuse to wear boring, lifeless designs." },
     ],
   }),
 });

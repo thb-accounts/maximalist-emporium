@@ -46,7 +46,7 @@ function Index() {
               </span>
             </h1>
             <p className="font-serif-d text-2xl md:text-3xl leading-tight max-w-2xl">
-              Anti-minimalist merch named after two very loud cats. <em className="bg-acid not-italic px-2">LDD refuses to whisper</em> — printed, embroidered, embossed, never beige.
+              Anti-minimalist merch named after two very loud cats. <em className="bg-acid not-italic px-2">LDD refuses to be boring.</em> — printed, embroidered, embossed, never beige.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link to="/categories" className="brutal-border brutal-shadow bg-ink text-cream px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
