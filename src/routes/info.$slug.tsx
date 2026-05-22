@@ -99,7 +99,7 @@ export const Route = createFileRoute("/info/$slug")({
 });
 
 function InfoPage() {
-  const { topic } = Route.useLoaderData();
+  const { topic } = Route.useLoaderData() as { topic: Topic };
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
