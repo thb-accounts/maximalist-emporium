@@ -44,9 +44,9 @@ const TOPICS: Record<string, Topic> = {
     kicker: "Embroidery, screen, DTG, embossed, foil.",
     body: [
       { h: "What we print", p: "Apparel, drinkware, bags, packaging, signage, stickers — almost anything flat or curved." },
-      { h: "Minimums", p: "Apparel: 12 units. Drinkware: 24 units. Stickers: 50 units." },
+      { h: "Minimums", p: "Apparel: 1 unit. Drinkware: 1 unit. Stickers: 1 unit." },
       { h: "Mockups", p: "Free digital mockup within 48 hours of brief." },
-      { h: "Brief", p: "Email custom@ldd.shop with product, art, quantities, and deadline." },
+      { h: "Brief", p: "Email ldd@unrealcake8.site with product, art, quantities, and deadline." },
     ],
   },
   faq: {
@@ -56,8 +56,8 @@ const TOPICS: Record<string, Topic> = {
       { h: "What does LDD stand for?", p: "Lumi & Dee-Dee — our two extremely loud cats. The brand is named after them." },
       { h: "Do you ship internationally?", p: "Yes — we ship worldwide. Duties calculated at checkout." },
       { h: "Can I order just one?", p: "Yes, almost everything is available as a single unit. Custom printing has minimums — see Custom Print." },
-      { h: "Do you do rush orders?", p: "Yes, for an extra fee. Email rush@ldd.shop and we'll see what we can do." },
-      { h: "Sustainability?", p: "Water-based inks, recycled poly options, and a full eco category. We're not perfect, but we're trying loudly." },
+      { h: "Do you do rush orders?", p: "Yes, for an extra fee. Email ldd@unrealcake8.site and we'll see what we can do." },
+      { h: "Sustainability?", p: "Recycled poly options, and a full eco category. We're not perfect, but we're trying loudly." },
     ],
   },
 };
