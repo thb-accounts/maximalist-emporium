@@ -156,7 +156,7 @@ function Index() {
             <p>We don't do "tasteful." We do <span className="bg-hot px-2">tasteful and loud</span>.</p>
             <p>We don't do "subtle." We do <span className="bg-acid text-ink px-2">subtle like a megaphone</span>.</p>
             <p>We don't do "less is more." We do <span className="bg-electric px-2">more is more is more</span>.</p>
-            <p className="font-display text-3xl uppercase pt-4">Welcome to the depot.</p>
+            <p className="font-display text-3xl uppercase pt-4">Welcome to LDD.</p>
           </div>
         </div>
       </section>
