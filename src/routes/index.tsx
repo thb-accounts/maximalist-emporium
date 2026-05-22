@@ -39,18 +39,18 @@ function Index() {
               <span className="bg-cream text-ink px-2 py-1 brutal-border">Bulk friendly</span>
             </div>
             <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] uppercase">
-              Loud
-              <span className="block text-hot -mt-2">Design</span>
+              Lumi
+              <span className="block text-hot -mt-2">&amp; Dee</span>
               <span className="block">
-                Depot<span className="text-electric">.</span>
+                Dee<span className="text-electric">.</span>
               </span>
             </h1>
             <p className="font-serif-d text-2xl md:text-3xl leading-tight max-w-2xl">
-              Anti-minimalist merch for brands that <em className="bg-acid not-italic px-2">refuse to whisper</em>. Printed, embroidered, embossed — never beige.
+              Anti-minimalist merch named after two very loud cats. <em className="bg-acid not-italic px-2">LDD refuses to whisper</em> — printed, embroidered, embossed, never beige.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link to="/categories" className="brutal-border brutal-shadow bg-ink text-cream px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-                Shop the depot →
+                Shop LDD →
               </Link>
               <Link to="/about" className="brutal-border bg-cream px-6 py-4 font-display text-lg uppercase hover:bg-acid transition-colors">
                 Our story
@@ -62,10 +62,10 @@ function Index() {
               <img src={logo} alt="Lumi & Dee-Dee" className="w-full h-full object-contain" />
             </div>
             <div className="absolute -top-4 -left-4 bg-acid brutal-border px-3 py-2 font-display text-lg uppercase -rotate-6">
-              Since '24
+              Since '26
             </div>
             <div className="absolute -bottom-4 -right-4 bg-hot text-cream brutal-border px-3 py-2 font-display text-lg uppercase rotate-6">
-              Pantone-approved chaos
+              Cat-approved chaos
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ function Index() {
           <div className="brutal-border bg-cream p-12 text-center brutal-shadow-hot">
             <div className="font-display text-4xl uppercase mb-3">No products found</div>
             <p className="font-mono-d text-xs uppercase tracking-widest text-ink/60 max-w-lg mx-auto">
-              The depot is empty. Tell the chat what to add — name + price + category — and we'll print it loud.
+              LDD is empty. Tell the chat what to add — name + price + category — and we'll print it loud.
             </p>
           </div>
         ) : (
@@ -156,7 +156,7 @@ function Index() {
             <p>We don't do "tasteful." We do <span className="bg-hot px-2">tasteful and loud</span>.</p>
             <p>We don't do "subtle." We do <span className="bg-acid text-ink px-2">subtle like a megaphone</span>.</p>
             <p>We don't do "less is more." We do <span className="bg-electric px-2">more is more is more</span>.</p>
-            <p className="font-display text-3xl uppercase pt-4">Welcome to the depot.</p>
+            <p className="font-display text-3xl uppercase pt-4">Welcome to LDD.</p>
           </div>
         </div>
       </section>
