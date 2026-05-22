@@ -131,7 +131,7 @@ function Index() {
           <div className="brutal-border bg-cream p-12 text-center brutal-shadow-hot">
             <div className="font-display text-4xl uppercase mb-3">No products found</div>
             <p className="font-mono-d text-xs uppercase tracking-widest text-ink/60 max-w-lg mx-auto">
-              The depot is empty. Tell the chat what to add — name + price + category — and we'll print it loud.
+              LDD is empty. Tell the chat what to add — name + price + category — and we'll print it loud.
             </p>
           </div>
         ) : (
