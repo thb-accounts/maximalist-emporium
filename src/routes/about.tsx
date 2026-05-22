@@ -7,8 +7,8 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About · LDD Loud Design Depot" },
-      { name: "description", content: "Loud Design Depot is an anti-minimalist merch shop printing for brands that refuse to whisper." },
+      { title: "About · Lumi &amp; Dee-Dee Lumi &amp; Dee-Dee" },
+      { name: "description", content: "Lumi &amp; Dee-Dee is an anti-minimalist merch shop printing for brands that refuse to whisper." },
     ],
   }),
 });
@@ -25,7 +25,7 @@ function About() {
       </section>
       <Marquee items={["Established 2024", "Maximalists welcome", "No beige allowed"]} bg="bg-acid" text="text-ink" />
       <section className="mx-auto max-w-[1000px] w-full px-4 md:px-8 py-16 space-y-6 font-serif-d text-2xl flex-1">
-        <p>LDD is short for <strong>Loud Design Depot</strong> — a merch printer for brands, teams, and creators that don't believe in restraint.</p>
+        <p>Lumi &amp; Dee-Dee is named after <strong>Lumi &amp; Dee-Dee</strong> — a merch printer for brands, teams, and creators that don't believe in restraint.</p>
         <p>We produce <span className="bg-acid px-2">apparel, drinkware, packaging, eco-gifts, tradeshow gear</span> and 15 more categories of branded chaos. Bulk-friendly. Rush-friendly. Print-on-demand or 10,000 units — pick your scale.</p>
         <p>Our rule of thumb: if it can be branded, screen-printed, embroidered, embossed, etched, sublimated, or stickered — we'll make it loud.</p>
       </section>
