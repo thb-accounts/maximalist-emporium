@@ -23,7 +23,7 @@ function Contact() {
           <div className="mt-8 space-y-3 font-mono-d text-sm uppercase tracking-widest">
             <div className="brutal-border p-4 bg-acid">hello@ldd.shop</div>
             <div className="brutal-border p-4 bg-electric text-cream">+1 (212) 555-LOUD</div>
-            <div className="brutal-border p-4 bg-cream">depot 9, brooklyn ny</div>
+            <div className="brutal-border p-4 bg-cream">LDD HQ — somewhere loud, est. '26</div>
           </div>
         </div>
         <form className="brutal-border brutal-shadow-hot bg-cream p-6 space-y-4">
