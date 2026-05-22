@@ -31,14 +31,12 @@ export function Footer() {
       return;
     }
     setSubmitting(true);
-    // Persist locally — no backend wired up
     try {
       const key = "ldd-newsletter";
       const list: string[] = JSON.parse(localStorage.getItem(key) ?? "[]");
       if (!list.includes(trimmed)) list.push(trimmed);
       localStorage.setItem(key, JSON.stringify(list));
     } catch {
-      /* ignore */
     }
     setTimeout(() => {
       toast.success("You're in. Drops incoming.");
@@ -121,7 +119,7 @@ export function Footer() {
             </button>
           </form>
           <div className="font-mono-d text-[10px] uppercase tracking-widest text-cream/50 mt-3">
-            hello@ldd.shop
+            ldd@unrealcake8.site
           </div>
         </div>
       </div>
