@@ -13,10 +13,11 @@ const TOPICS: Record<string, Topic> = {
     title: "Shipping",
     kicker: "Loud merch, on the move.",
     body: [
-      { h: "Standard", p: "3–6 business days in the US. Free over $250." },
-      { h: "Express", p: "1–2 business days. Flat $25 anywhere in the US." },
-      { h: "International", p: "7–14 business days. Duties calculated at checkout." },
-      { h: "Tracking", p: "You'll get a tracking link the second your order ships." },
+      { h: "Standard", p: "4–5 business days in the UAE. Free no matter your minimum order." },
+      { h: "Economy", p: "3 business days. AED 45 ($12)" },
+      { h: "24 Hours Delivery - UAE", p: "24 hours. AED 95 ($26) flat rate." },
+      { h: "International", p: "International shipping cost is AED 100 ($27)" },
+      { h: "Tracking", p: "You will receive details on your order via our external provider Merchlist, but you can contact us to follow up on your order for you." },
     ],
   },
   returns: {
