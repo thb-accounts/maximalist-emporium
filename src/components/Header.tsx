@@ -8,9 +8,9 @@ export function Header() {
       <div className="stripes h-2" />
       <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-3 md:px-8">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Lumi &amp; Dee-Dee" className="h-12 w-12 brutal-border" />
+          <img src={logo} alt="Lumi & Dee-Dee" className="h-12 w-12 brutal-border" />
           <div className="hidden sm:block">
-            <div className="font-display text-2xl leading-none">LUMI &amp; DEE-DEE</div>
+            <div className="font-display text-2xl leading-none">LUMI & DEE-DEE</div>
             <div className="font-mono-d text-[10px] uppercase tracking-[0.3em] text-ink/70">est · merch · for · maximalists</div>
           </div>
         </Link>

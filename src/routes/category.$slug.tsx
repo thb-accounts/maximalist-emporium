@@ -14,8 +14,8 @@ export const Route = createFileRoute("/category/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.name ?? "Category"} · Lumi &amp; Dee-Dee` },
-      { name: "description", content: `Shop ${loaderData?.name ?? "merch"} at Lumi &amp; Dee-Dee. Anti-minimalist branded gear.` },
+      { title: `${loaderData?.name ?? "Category"} · Lumi & Dee-Dee` },
+      { name: "description", content: `Shop ${loaderData?.name ?? "merch"} at Lumi & Dee-Dee. Anti-minimalist branded gear.` },
     ],
   }),
 });
