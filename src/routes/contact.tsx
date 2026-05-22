@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact · Lumi & Dee-Dee" },
-      { name: "description", content: "Get a quote, request bulk pricing or send custom artwork to LDD." },
+      { name: "description", content: "Get a quote, request bulk pricing or send custom artwork to Lumi & Dee-Dee." },
     ],
   }),
 });
