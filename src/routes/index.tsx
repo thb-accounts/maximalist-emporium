@@ -71,7 +71,7 @@ function Index() {
         </div>
       </section>
 
-      <Marquee items={["Free shipping over $250", "Bulk discounts", "Custom artwork welcomed", "Eco-friendly inks", "Made loud", "Rush orders"]} />
+      <Marquee items={["Free shipping for all UAE orders", "Bulk discounts", "Custom designed shirts welcome", "Eco-friendly section", "Made meow", "Rush orders"]} />
 
       {/* CATEGORIES GRID */}
       <section className="mx-auto max-w-[1600px] w-full px-4 md:px-8 py-16">
@@ -131,7 +131,7 @@ function Index() {
           <div className="brutal-border bg-cream p-12 text-center brutal-shadow-hot">
             <div className="font-display text-4xl uppercase mb-3">No products found</div>
             <p className="font-mono-d text-xs uppercase tracking-widest text-ink/60 max-w-lg mx-auto">
-              LDD is empty. Tell the chat what to add — name + price + category — and we'll print it loud.
+              LDD is empty. Tell LDD what to add — name + price + category — and we'll print it meow.
             </p>
           </div>
         ) : (
@@ -149,11 +149,11 @@ function Index() {
           <div>
             <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-acid mb-4">Manifesto</div>
             <h2 className="font-display text-5xl md:text-7xl uppercase leading-[0.9]">
-              Minimalism is <span className="text-hot">cowardice</span> dressed in beige.
+              Minimalism is <span className="text-hot">cowardice</span> dressed in boring.
             </h2>
           </div>
           <div className="space-y-4 font-serif-d text-xl">
-            <p>We don't do "tasteful." We do <span className="bg-hot px-2">tasteful and loud</span>.</p>
+            <p>We don't do "tasteful." We do <span className="bg-hot px-2">tasteful and items that make you go WOW</span>.</p>
             <p>We don't do "subtle." We do <span className="bg-acid text-ink px-2">subtle like a megaphone</span>.</p>
             <p>We don't do "less is more." We do <span className="bg-electric px-2">more is more is more</span>.</p>
             <p className="font-display text-3xl uppercase pt-4">Welcome to LDD.</p>
