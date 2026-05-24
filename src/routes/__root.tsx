@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
 import { useCartSync } from "@/hooks/useCartSync";
+import { ChatButton } from "@/components/ChatButton";
 
 import appCss from "../styles.css?url";
 
