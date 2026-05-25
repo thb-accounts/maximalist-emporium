@@ -41,7 +41,14 @@ export function ProductCard({ product, index = 0 }: { product: ShopifyProduct; i
       <div className={`${bg} brutal-border ${shadow} hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all`}>
         <div className="aspect-square overflow-hidden bg-muted border-b-[3px] border-ink relative">
           {image ? (
-            <img src={image.url} alt={image.altText || product.node.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img
+              src={image.url}
+              alt={image.altText || product.node.title}
+              loading="lazy"
+              width={400}
+              height={400}
+              className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           ) : (
             <div className="checker h-full w-full opacity-30" />
           )}

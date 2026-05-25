@@ -4,27 +4,38 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Marquee } from "@/components/Marquee";
 import { ProductCard } from "@/components/ProductCard";
-import { CATEGORIES, fetchProducts } from "@/lib/shopify";
+import { HowItWorks } from "@/components/HowItWorks";
+import { TrustStrip } from "@/components/TrustStrip";
+import { SocialProof } from "@/components/SocialProof";
+import { MobileStickyBar } from "@/components/MobileStickyBar";
+import { fetchProducts } from "@/lib/shopify";
+import { B2C_CATEGORIES, getBestsellers, filterB2C } from "@/lib/curation";
+import { Sparkles, ArrowRight } from "lucide-react";
 import logo from "@/assets/ldd-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Lumi & Dee-Dee — Anti-minimalist branded merch" },
-      { name: "description", content: "Shop loud, maximalist branded merchandise across 20+ categories. Tees, hoodies, drinkware, eco-gifts, packaging and more." },
+      { title: "Lumi & Dee-Dee — Custom merch that refuses to be boring" },
+      { name: "description", content: "Personalized gifts, apparel, mugs, bags & more — made for loud people. Custom merch shipped across the UAE." },
+      { property: "og:title", content: "Lumi & Dee-Dee — Custom merch that refuses to be boring" },
+      { property: "og:description", content: "Personalized gifts, apparel, mugs, bags & more — made for loud people." },
     ],
   }),
 });
 
 function Index() {
-  const { data: products = [], isLoading } = useQuery({
+  const { data: allProducts = [], isLoading } = useQuery({
     queryKey: ["products", "all"],
-    queryFn: () => fetchProducts(50),
+    queryFn: () => fetchProducts(100),
   });
 
+  const bestsellers = getBestsellers(allProducts, 8);
+  const totalCurated = filterB2C(allProducts).length;
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pb-14 lg:pb-0">
       <Header />
 
       {/* HERO */}
@@ -33,92 +44,63 @@ function Index() {
         <div className="relative mx-auto max-w-[1600px] px-4 md:px-8 py-10 md:py-16 grid lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="flex flex-wrap items-center gap-2 font-mono-d text-[10px] uppercase tracking-widest">
-              <span className="bg-hot text-cream px-2 py-1 brutal-border">★ New drop</span>
-              <span className="bg-acid text-ink px-2 py-1 brutal-border">50+ products</span>
-              <span className="bg-electric text-cream px-2 py-1 brutal-border">20 categories</span>
-              <span className="bg-cream text-ink px-2 py-1 brutal-border">Bulk friendly</span>
+              <span className="bg-hot text-cream px-2 py-1 brutal-border">★ Made in UAE</span>
+              <span className="bg-acid text-ink px-2 py-1 brutal-border">Custom · Personalized</span>
+              <span className="bg-electric text-cream px-2 py-1 brutal-border">Ships in 5–7 days</span>
             </div>
-            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] uppercase">
-              Lumi
-              <span className="block text-hot -mt-2">&amp; Dee</span>
+            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] leading-[0.85] uppercase">
+              Custom merch
+              <span className="block text-hot -mt-2">that refuses</span>
               <span className="block">
-                Dee<span className="text-electric">.</span>
+                to be boring<span className="text-electric">.</span>
               </span>
             </h1>
-            <p className="font-serif-d text-2xl md:text-3xl leading-tight max-w-2xl">
-              Anti-minimalist merch named after two very loud cats. <em className="bg-acid not-italic px-2">LDD refuses to be boring.</em> — printed, embroidered, embossed, never beige.
+            <p className="font-serif-d text-xl md:text-2xl leading-tight max-w-2xl">
+              Personalized gifts, apparel, mugs, bags & more — <em className="bg-acid not-italic px-2">made for loud people</em>. Whatever you'd put on a billboard, we'll put on a hoodie.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link to="/categories" className="brutal-border brutal-shadow bg-ink text-cream px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-                Shop LDD →
+              <Link
+                to="/categories"
+                className="brutal-border brutal-shadow bg-ink text-cream px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center gap-2"
+              >
+                Shop now <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link to="/about" className="brutal-border bg-cream px-6 py-4 font-display text-lg uppercase hover:bg-acid transition-colors">
-                Our story
+              <Link
+                to="/contact"
+                className="brutal-border brutal-shadow-hot bg-acid text-ink px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center gap-2"
+              >
+                <Sparkles className="w-5 h-5" /> Create your own
               </Link>
             </div>
           </div>
           <div className="lg:col-span-5 relative">
             <div className="aspect-square brutal-border bg-ink p-8 flex items-center justify-center brutal-shadow-hot wiggle">
-              <img src={logo} alt="Lumi & Dee-Dee" className="w-full h-full object-contain" />
+              <img src={logo} alt="Lumi & Dee-Dee — playful custom merch brand" className="w-full h-full object-contain" />
             </div>
             <div className="absolute -top-4 -left-4 bg-acid brutal-border px-3 py-2 font-display text-lg uppercase -rotate-6">
-              Since '26
+              Cat-approved
             </div>
             <div className="absolute -bottom-4 -right-4 bg-hot text-cream brutal-border px-3 py-2 font-display text-lg uppercase rotate-6">
-              Cat-approved chaos
+              Made meow
             </div>
           </div>
         </div>
       </section>
 
-      <Marquee items={["Free shipping for all UAE orders", "Bulk discounts", "Custom designed shirts welcome", "Eco-friendly section", "Made meow", "Rush orders"]} />
+      <Marquee items={["★ Free shipping over AED 200", "★ Made-to-order in UAE", "★ Bulk discounts", "★ Custom designs welcome", "★ Cat-approved chaos"]} />
 
-      {/* CATEGORIES GRID */}
+      {/* BESTSELLERS */}
       <section className="mx-auto max-w-[1600px] w-full px-4 md:px-8 py-16">
         <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
           <div>
-            <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-ink/60">01 — Browse</div>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">All 20 categories</h2>
+            <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-ink/60">01 — Bestsellers</div>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">
+              People's <span className="text-hot">favorites</span>
+            </h2>
           </div>
           <Link to="/categories" className="font-mono-d text-xs uppercase tracking-widest underline underline-offset-4">
-            See all →
+            See all {totalCurated || ""} →
           </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {CATEGORIES.map((cat, i) => (
-            <Link
-              key={cat.slug}
-              to="/category/$slug"
-              params={{ slug: cat.slug }}
-              className={`brutal-border p-4 aspect-square flex flex-col justify-between hover:translate-x-1 hover:translate-y-1 transition-transform ${
-                i % 4 === 0 ? "bg-cream brutal-shadow" :
-                i % 4 === 1 ? "bg-acid brutal-shadow-hot" :
-                i % 4 === 2 ? "bg-hot text-cream brutal-shadow-electric" :
-                "bg-electric text-cream brutal-shadow-acid"
-              }`}
-            >
-              <div className="text-4xl">{cat.emoji}</div>
-              <div>
-                <div className="font-mono-d text-[10px] uppercase tracking-widest opacity-70">{String(i + 1).padStart(2, "0")}</div>
-                <div className="font-display text-base uppercase leading-tight">{cat.name}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <Marquee items={["★ Bestsellers", "★ New arrivals", "★ Limited drops"]} bg="bg-acid" text="text-ink" />
-
-      {/* PRODUCTS */}
-      <section className="mx-auto max-w-[1600px] w-full px-4 md:px-8 py-16">
-        <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
-          <div>
-            <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-ink/60">02 — Shop</div>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">The merch <span className="text-hot">wall</span></h2>
-          </div>
-          <div className="font-mono-d text-xs uppercase tracking-widest bg-ink text-cream px-3 py-2">
-            {isLoading ? "Loading…" : `${products.length} products`}
-          </div>
         </div>
 
         {isLoading ? (
@@ -127,41 +109,83 @@ function Index() {
               <div key={i} className="aspect-[3/4] brutal-border bg-muted animate-pulse" />
             ))}
           </div>
-        ) : products.length === 0 ? (
+        ) : bestsellers.length === 0 ? (
           <div className="brutal-border bg-cream p-12 text-center brutal-shadow-hot">
-            <div className="font-display text-4xl uppercase mb-3">No products found</div>
-            <p className="font-mono-d text-xs uppercase tracking-widest text-ink/60 max-w-lg mx-auto">
-              LDD is empty. Tell LDD what to add — name + price + category — and we'll print it meow.
-            </p>
+            <div className="font-display text-3xl uppercase">More drops coming soon</div>
           </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {products.map((p, i) => (
+            {bestsellers.map((p, i) => (
               <ProductCard key={p.node.id} product={p} index={i} />
             ))}
           </div>
         )}
       </section>
 
-      {/* MANIFESTO */}
-      <section className="bg-ink text-cream py-20 brutal-border border-x-0">
-        <div className="mx-auto max-w-[1200px] px-4 md:px-8 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-acid mb-4">Manifesto</div>
-            <h2 className="font-display text-5xl md:text-7xl uppercase leading-[0.9]">
-              Minimalism is <span className="text-hot">cowardice</span> dressed in boring.
-            </h2>
+      {/* SHOP BY CATEGORY */}
+      <section className="bg-acid/30 brutal-border border-x-0 py-16">
+        <div className="mx-auto max-w-[1600px] px-4 md:px-8">
+          <div className="mb-10">
+            <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-ink/60">02 — Shop by category</div>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">Pick your vibe</h2>
           </div>
-          <div className="space-y-4 font-serif-d text-xl">
-            <p>We don't do "tasteful." We do <span className="bg-hot px-2">tasteful and items that make you go WOW</span>.</p>
-            <p>We don't do "subtle." We do <span className="bg-acid text-ink px-2">subtle like a megaphone</span>.</p>
-            <p>We don't do "less is more." We do <span className="bg-electric px-2">more is more is more</span>.</p>
-            <p className="font-display text-3xl uppercase pt-4">Welcome to LDD.</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {B2C_CATEGORIES.map((cat, i) => {
+              const tints = ["bg-cream", "bg-hot text-cream", "bg-electric text-cream", "bg-acid", "bg-sky", "bg-cream"];
+              return (
+                <Link
+                  key={cat.slug}
+                  to="/category/$slug"
+                  params={{ slug: cat.slug }}
+                  className={`brutal-border ${tints[i % tints.length]} brutal-shadow p-5 aspect-square flex flex-col justify-between hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative`}
+                >
+                  <div className="text-5xl">{cat.emoji}</div>
+                  <div>
+                    <div className="font-display text-xl uppercase leading-tight">{cat.name}</div>
+                    <div className="font-mono-d text-[10px] uppercase tracking-widest opacity-70 mt-1">{cat.tagline}</div>
+                  </div>
+                  {cat.comingSoon && (
+                    <div className="absolute top-2 right-2 bg-ink text-cream font-mono-d text-[9px] uppercase px-1.5 py-0.5 tracking-widest">
+                      Soon
+                    </div>
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <HowItWorks />
+
+      {/* TRUST */}
+      <TrustStrip />
+
+      {/* SOCIAL PROOF */}
+      <SocialProof />
+
+      {/* SHORT MANIFESTO — bottom */}
+      <section className="bg-ink text-cream py-16 brutal-border border-x-0">
+        <div className="mx-auto max-w-[1200px] px-4 md:px-8 text-center">
+          <div className="font-mono-d text-xs uppercase tracking-[0.4em] text-acid mb-4">The LDD way</div>
+          <h2 className="font-display text-4xl md:text-6xl uppercase leading-[0.95]">
+            Boring is the <span className="text-hot">only thing</span> we don't make.
+          </h2>
+          <p className="font-serif-d text-xl md:text-2xl mt-6 max-w-2xl mx-auto">
+            Named after two very loud cats. Made for everyone who refuses to whisper.
+          </p>
+          <Link
+            to="/categories"
+            className="inline-flex items-center gap-2 mt-8 brutal-border brutal-shadow-hot bg-cream text-ink px-6 py-4 font-display text-lg uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+          >
+            Start shopping <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+
       <Footer />
+      <MobileStickyBar />
     </div>
   );
 }
