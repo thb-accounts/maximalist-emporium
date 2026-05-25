@@ -4,11 +4,11 @@ import { toast } from "sonner";
 import logo from "@/assets/ldd-logo.png";
 
 const SHOP_LINKS: { slug: string; label: string }[] = [
-  { slug: "tshirts-polos", label: "Apparel" },
-  { slug: "bottles-mugs", label: "Drinkware" },
-  { slug: "office-stationery", label: "Office" },
-  { slug: "eco-friendly", label: "Eco" },
-  { slug: "corporate-gifting", label: "Gifting" },
+  { slug: "apparel", label: "Apparel" },
+  { slug: "drinkware", label: "Drinkware" },
+  { slug: "bags", label: "Bags" },
+  { slug: "gifts", label: "Gifts" },
+  { slug: "tech", label: "Tech" },
 ];
 
 const HELP_LINKS: { slug: string; label: string }[] = [
@@ -55,7 +55,7 @@ export function Footer() {
           </Link>
           <div className="font-display text-2xl">LUMI & DEE-DEE</div>
           <p className="font-mono-d text-xs uppercase tracking-widest text-cream/70">
-            LDD — we print loud merch for brands that refuse to whisper.
+            Custom merch that refuses to be boring. Made in UAE.
           </p>
           <div className="flex gap-2 pt-2">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="brutal-border border-cream px-3 py-1 font-mono-d text-[10px] uppercase tracking-widest hover:bg-hot transition-colors">IG</a>
