@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { fetchProducts } from "@/lib/shopify";
 import { filterB2C, B2C_CATEGORIES } from "@/lib/curation";
 
-const BASE_URL = "https://ldd.lovable.app";
+const BASE_URL = "https://shopwithldd.com";
 
 interface SitemapEntry {
   path: string;
